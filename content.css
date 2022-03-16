@@ -19,6 +19,7 @@ body {
 }
 
 .contents.menu > a {
+  font-size: 1.8rem;
   text-decoration: none;
   color: var(--main_colour);
   margin: 0 auto;
@@ -315,5 +316,16 @@ a:hover {
   }
   .contents.menu > a {
     margin-top: 1rem;
+  }
+  .grid.container {
+    width: inherit !important;
+    margin: 0 auto;
+  }
+  #teacherGrid {
+    gap: 4rem;
+    margin-bottom: 3rem;
+  }
+  .teacher.image.container {
+    width: 100%;
   }
 }

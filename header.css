@@ -109,21 +109,22 @@ h1 {
 .selected:hover {
   color: white !important;
 }
-
+#menuButton {
+  display: none;
+}
 @media only screen and (max-width: 700px) {
   html {
     font-size: 12px;
     /* font-size: 1rem !important; */
   }
+  nav {
+    transition: 0.3s;
+  }
   .selected {
     font-weight: unset;
     text-shadow: none;
   }
-  h1 {
-    font-size: calc(1.5 * var(--border_height)) !important;
-    margin: calc(1.5 * var(--border_height));
-    margin: 10% 0 3% 0;
-  }
+
   header {
     position: relative;
   }
@@ -131,22 +132,48 @@ h1 {
     font-size: 1.6rem !important;
     line-height: 1.7rem;
   }
-  .links {
+  header nav .links {
     flex-direction: column;
-  }
-  nav {
-    transition: 0.3s;
-  }
-  .links a {
-    margin: 0.7rem;
+    align-items: center;
     display: none;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+  header .links a {
+    margin: 0.7rem 2rem;
+    /* display: none; */
+    font-size: 2rem !important;
+    font-weight: 400;
   }
   .links p {
     display: none;
+    text-align: right !important;
   }
   #menuButton {
     display: block;
     font-size: 3rem;
     margin: 0;
+  }
+
+  .header.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  .header.wrapper > * {
+    color: white;
+    font-size: calc(1.1 * var(--border_height)) !important;
+    margin: calc(1.5 * var(--border_height));
+    margin: 10% 0 3% 0;
+    text-shadow: 0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.6);
+  }
+  header::before,
+  header::after {
+    height: calc(0.5 * var(--border_height));
+    background-color: black;
+    border-bottom: calc(0.2 * var(--border_height)) solid white;
+    transition: 0.3s ease-in-out;
   }
 }

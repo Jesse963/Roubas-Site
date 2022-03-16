@@ -93,6 +93,7 @@ if (window.location.href.includes("about"))
 
     const img = document.createElement("img");
     img.src = teacher.image;
+    img.loading = "lazy";
 
     const teacherName = document.createElement("p");
     teacherName.classList.add("teacher", "name");
@@ -125,12 +126,8 @@ console.log(headings);
 
 let expanded = false;
 menuHandler = () => {
-  const menuItems = document.querySelectorAll("nav .links a");
-  const container = document.querySelector("nav .links");
-  menuItems.forEach((item) => {
-    item.style.display = !expanded ? "block" : "none";
-    window.location.href = "#top";
-  });
-  // container.style.height = "50vh";
+  const menuItems = document.querySelector("header nav .links");
+  menuItems.style.display = !expanded ? "flex" : "none";
+  window.location.href = "#top";
   expanded = !expanded;
 };
