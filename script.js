@@ -1,23 +1,20 @@
-const main = document.querySelector("main");
+const main = document.querySelector("main h2");
 const nav = document.querySelector("nav");
 const header = document.querySelector("header");
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
-    if (entries[0].intersectionRatio > 0.97) {
-      header.style.setProperty("--border_height", "2rem");
-    } else {
-      header.style.setProperty("--border_height", "1rem");
-    }
-    console.log(entries[0].intersectionRatio);
+    let prop;
+    prop = entries[0].isIntersecting ? "2rem" : "1rem";
+    header.style.setProperty("--border_height", prop);
   },
-  { threshold: 0.97 }
+  { rootMargin: "-20%" }
 );
 
 //Note -- int observer breaking and causing page to jitter.
 //fix when more content on page
 
-// observer.observe(main);
+observer.observe(main);
 
 const emailHandler = () => {
   const name = document.querySelector("form #name").value;
