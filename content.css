@@ -279,7 +279,7 @@ a:hover {
   }
   #bannerPhoto,
   .image.container {
-    width: 100vw;
+    width: 110%;
     margin: 0;
     height: 300px;
     /* overflow: hidden; */
@@ -322,8 +322,8 @@ a:hover {
     margin: 0 auto;
   }
   #teacherGrid {
-    gap: 4rem;
-    margin-bottom: 3rem;
+    gap: 4rem !important;
+    margin-bottom: 3rem !important;
   }
   .teacher.image.container {
     width: 100%;
