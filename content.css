@@ -322,7 +322,7 @@ a:hover {
     margin: 0 auto;
   }
   #teacherGrid {
-    gap: 4rem !important;
+    gap: 6rem !important;
     margin-bottom: 3rem !important;
   }
   .teacher.image.container {
