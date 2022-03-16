@@ -48,6 +48,7 @@ const doc = document.querySelector("html");
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
+    if (window.screen.width < 700) return;
     let prop;
     let margin;
     prop = entries[0].isIntersecting ? "2rem" : "1rem";
@@ -121,3 +122,15 @@ headings.forEach((heading) => {
   heading.append(topButton);
 });
 console.log(headings);
+
+let expanded = false;
+menuHandler = () => {
+  const menuItems = document.querySelectorAll("nav .links a");
+  const container = document.querySelector("nav .links");
+  menuItems.forEach((item) => {
+    item.style.display = !expanded ? "block" : "none";
+    window.location.href = "#top";
+  });
+  // container.style.height = "50vh";
+  expanded = !expanded;
+};

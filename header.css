@@ -109,3 +109,44 @@ h1 {
 .selected:hover {
   color: white !important;
 }
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 12px;
+    /* font-size: 1rem !important; */
+  }
+  .selected {
+    font-weight: unset;
+    text-shadow: none;
+  }
+  h1 {
+    font-size: calc(1.5 * var(--border_height)) !important;
+    margin: calc(1.5 * var(--border_height));
+    margin: 10% 0 3% 0;
+  }
+  header {
+    position: relative;
+  }
+  header a {
+    font-size: 1.6rem !important;
+    line-height: 1.7rem;
+  }
+  .links {
+    flex-direction: column;
+  }
+  nav {
+    transition: 0.3s;
+  }
+  .links a {
+    margin: 0.7rem;
+    display: none;
+  }
+  .links p {
+    display: none;
+  }
+  #menuButton {
+    display: block;
+    font-size: 3rem;
+    margin: 0;
+  }
+}

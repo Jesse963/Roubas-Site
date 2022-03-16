@@ -263,3 +263,57 @@ a:hover {
 .top.button:hover {
   opacity: 1;
 }
+
+@media only screen and (max-width: 700px) {
+  .page.title {
+    margin: 0.6rem;
+  }
+
+  .control.buttons {
+    flex-direction: column;
+  }
+  .control.buttons button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  #bannerPhoto,
+  .image.container {
+    width: 100vw;
+    margin: 0;
+    height: 300px;
+    /* overflow: hidden; */
+  }
+  #bannerPhoto {
+    top: 0;
+    object-position: center;
+    position: absolute;
+    left: -10%;
+  }
+
+  form button {
+    margin: 0 -1rem !important;
+    width: calc(100% + 2rem);
+    text-align: center;
+  }
+  form input,
+  form textarea {
+    width: 100%;
+    margin-left: -1rem;
+  }
+  .timetable {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .timetable * {
+    width: 100%;
+    text-align: left !important;
+    margin: 0.5rem auto;
+  }
+  .contents.menu {
+    flex-direction: column;
+  }
+  .contents.menu > a {
+    margin-top: 1rem;
+  }
+}
