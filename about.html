@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,27 +25,17 @@
         </h1>
         <div class="links">
           <p>|</p>
-          <a class="intro selected" href="index.html">Home</a>
+          <a class="intro" href="index.html">Home</a>
           <p>|</p>
           <a href="new_comers.html">New Comers</a>
           <p>|</p>
-          <a href="education.html">About Us</a>
+          <a class="selected" href="about.html">About Us</a>
           <p>|</p>
-          <a href="experience.html">Location & Times</a>
+          <a href="location.html">Location & Times</a>
           <p>|</p>
-          <a href="activities.html">News & Events</a>
-          <p>|</p>
-          <a id="download" href="">Gallery</a>
-          <p>|</p>
-          <a id="download" href="">Contact</a>
+          <a id="contact" href="contact.html">Contact</a>
           <p>|</p>
         </div>
-        <!-- <div class="socials">
-          <a href="">F</a>
-          <a href="">G</a>
-          <a href="">L</a>
-          <a href="">I</a>
-        </div> -->
       </nav>
     </header>
     <main>
@@ -61,10 +51,10 @@
           </div>
           <section id="about">
             <p>
-              Our style of martial arts is GoJu-Ryu Karate-Do, a traditional
-              Japanese martial art aimed to promote physical fitness,
-              self-defence, body conditioning and improvement in mental attitude
-              ultimately becoming a way of life.
+              Our style of martial arts is <em> Goju-Ryu Karate-Do</em>, a
+              traditional Japanese martial art aimed to promote physical
+              fitness, self-defence, body conditioning and improvement in mental
+              attitude ultimately becoming a way of life.
             </p>
 
             <p>
@@ -93,12 +83,9 @@
           </section>
           <section class="teachers">
             <h3 id="teachers">Teachers</h3>
-            <h4>Andrew Roubas - 9th Dan</h4>
-            <p>Blurb about Andrew, photo</p>
-            <h4>Stefan Roubas - 8th Dan</h4>
-            <p>Blurb about Stefan, photo</p>
-            <h4>Others</h4>
-            <p>Etc.</p>
+            <div class="grid container">
+              <div id="teacherGrid"></div>
+            </div>
           </section>
           <section class="structure">
             <h3 id="structure">Class Structure</h3>
@@ -269,12 +256,12 @@
     <footer>
       <nav aria-label="footer nav">
         <div class="footer links">
-          <a class="intro" href="index.html">Intro</a>
-          <a href="skills.html">Skills</a>
-          <a href="education.html">Education</a>
-          <a href="experience.html">Work Experience</a>
-          <a href="activities.html">Other Activities</a>
-          <a href="">Download Resume</a>
+          <a class="intro" href="index.html">Home</a>
+          <a href="new_comers.html">New Comers</a>
+          <a href="about.html">About Us</a>
+          <a href="location.html">Location & Times</a>
+          <a id="contact" href="contact.html">Contact</a>
+          <a href="#top">Back to Top</a>
         </div>
         <div class="contact">
           <p>© Copyright Roubas Goju Ryu Karate 2022</p>

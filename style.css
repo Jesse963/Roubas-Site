@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 20rem;
+  scroll-padding-top: 17rem;
 }
 body {
   margin: 0px;
@@ -10,13 +10,14 @@ body {
   --header_height: 5vh;
   --background_colour: white;
   --main_colour: rgb(170, 0, 0);
+  /* --main_colour: #0a9; */
   overflow-y: auto;
 }
 
 main {
   width: 65%;
-  margin: 0 auto;
-  min-height: 80vh;
+  margin: 0 auto 2rem auto;
+  min-height: 70vh;
   margin-top: 5rem;
   /* margin-bottom: calc(-1 * var(--footer_height)); */
 }

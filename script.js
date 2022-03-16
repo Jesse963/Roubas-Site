@@ -1,12 +1,58 @@
+const teachers = [
+  {
+    name: "Andrew Roubas",
+    grade: "9th Dan",
+    image: "andrew.png",
+  },
+  {
+    name: "Stefan Roubas",
+    grade: "8th Dan",
+    image: "andrew.png",
+  },
+  {
+    name: "Paul Dovico",
+    grade: "7th Dan",
+    image: "andrew.png",
+  },
+  {
+    name: "Jayson Cook",
+    grade: "6th Dan",
+    image: "andrew.png",
+  },
+  {
+    name: "Martin Unger",
+    grade: "4th Dan",
+    image: "andrew.png",
+  },
+  {
+    name: "Michael Thomakos",
+    grade: "3rd Dan",
+    image: "andrew.png",
+  },
+  {
+    name: "Claudio Nieto",
+    grade: "3rd Dan",
+    image: "andrew.png",
+  },
+  {
+    name: "Jesse Jenkins",
+    grade: "2nd Dan",
+    image: "teacherPhotos/jesse.jpg",
+  },
+];
+
 const main = document.querySelector("main h2");
 const nav = document.querySelector("nav");
 const header = document.querySelector("header");
+const doc = document.querySelector("html");
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
     let prop;
+    let margin;
     prop = entries[0].isIntersecting ? "2rem" : "1rem";
     header.style.setProperty("--border_height", prop);
+    doc.style.scrollPaddingTop = margin;
   },
   { rootMargin: "-20%" }
 );
@@ -36,3 +82,42 @@ const emailHandler = () => {
   const address = `mailto:info@karatedojo.com.au?subject=Expression of Interest&body=${body}`;
   window.location.href = address;
 };
+
+const teacherGrid = document.querySelector("#teacherGrid");
+
+if (window.location.href.includes("about"))
+  teachers.forEach((teacher) => {
+    const div = document.createElement("div");
+    div.classList.add("teacher", "image", "container");
+
+    const img = document.createElement("img");
+    img.src = teacher.image;
+
+    const teacherName = document.createElement("p");
+    teacherName.classList.add("teacher", "name");
+    teacherName.textContent = teacher.name;
+
+    const teacherGrade = document.createElement("p");
+    teacherGrade.classList.add("teacher", "grade");
+    teacherGrade.textContent = teacher.grade;
+
+    console.log(teacherName, teacherGrade);
+
+    div.append(img);
+    div.append(teacherName);
+    div.append(teacherGrade);
+
+    teacherGrid.append(div);
+  });
+
+const headings = document.querySelectorAll("h3");
+headings.forEach((heading) => {
+  const topButton = document.createElement("p");
+  topButton.classList.add("top", "button");
+  const topLink = document.createElement("a");
+  topLink.textContent = "Scroll to Top";
+  topLink.href = "#top";
+  topButton.append(topLink);
+  heading.append(topButton);
+});
+console.log(headings);
