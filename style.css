@@ -31,4 +31,7 @@ main {
     font-size: 1.6rem;
     text-align: center;
   }
+  html {
+    scroll-padding-top: 2rem;
+  }
 }
