@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="content.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Roubas Karate</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1 class="header name" onclick="location.href = 'index.html'">
+          Roubas Goju Ryu Karate
+        </h1>
+        <div class="links">
+          <p>|</p>
+          <a class="intro selected" href="index.html">Home</a>
+          <p>|</p>
+          <a href="new_comers.html">New Comers</a>
+          <p>|</p>
+          <a href="education.html">About Us</a>
+          <p>|</p>
+          <a href="experience.html">Location & Times</a>
+          <p>|</p>
+          <a href="activities.html">News & Events</a>
+          <p>|</p>
+          <a id="download" href="">Gallery</a>
+          <p>|</p>
+          <a id="download" href="">Contact</a>
+          <p>|</p>
+        </div>
+        <!-- <div class="socials">
+          <a href="">F</a>
+          <a href="">G</a>
+          <a href="">L</a>
+          <a href="">I</a>
+        </div> -->
+      </nav>
+    </header>
+    <main>
+      <h2 class="page title">Contact</h2>
+      <div class="content wrapper">
+        <section class="main content">
+          <p>
+            If you have any questions or enquiries please feel free to contact
+            with the form below, or call, text or email us using these details:
+            <br />
+            <br />
+            Phone:
+            <a id="phoneNumber" href="tel:0420979373"> 0420 979 373</a>
+            <br />
+            Email:
+            <a id="emailAddress" href="mailto:info@karatedojo.com.au"
+              >info@karatedojo.com.au</a
+            >
+          </p>
+          <br />
+          <form
+            action="javascript:void(0);"
+            method="POST"
+            enctype="multipart/form-data"
+            name="EmailForm"
+          >
+            <p>
+              <label for="name">Name</label>
+              <input type="text" id="name" required />
+            </p>
+            <p>
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" required />
+            </p>
+            <p>
+              <label for="message">Message</label>
+              <textarea type="text" id="message" rows="4" required></textarea>
+            </p>
+            <p id="error"></p>
+            <button type="submit" onclick="emailHandler()">Submit</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <nav aria-label="footer nav">
+        <div class="footer links">
+          <a class="intro" href="index.html">Intro</a>
+          <a href="skills.html">Skills</a>
+          <a href="education.html">Education</a>
+          <a href="experience.html">Work Experience</a>
+          <a href="activities.html">Other Activities</a>
+          <a href="">Download Resume</a>
+        </div>
+        <div class="contact">
+          <p>© Copyright Roubas Goju Ryu Karate 2022</p>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>

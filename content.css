@@ -1,0 +1,160 @@
+body {
+  background: white;
+}
+
+/* .content.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+} */
+
+.main.content {
+  margin: 0 auto;
+  max-width: 80ch;
+}
+
+.contents.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contents.menu > a {
+  text-decoration: none;
+  color: var(--main_colour);
+  margin: 0 auto;
+}
+
+.contents.menu > a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.page.title {
+  color: var(--main_colour);
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.main.content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.main.content h4 {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
+.main.content h5 {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+  color: var(--main_colour);
+}
+.dates {
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+  color: #000 !important;
+}
+
+.main.content p,
+.main.content li {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.role.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.panel {
+  margin: 0 5% 0 0;
+  width: 50%;
+}
+
+em {
+  color: black;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.results li,
+.education li {
+  padding-bottom: 1rem;
+}
+
+.timetable {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.timetable h4 {
+  text-align: center;
+  color: var(--main_colour);
+}
+.juniors {
+  text-align: left;
+}
+.seniors {
+  text-align: right;
+}
+.map {
+  border: 0.15rem solid black !important;
+}
+.carlingford.map {
+  margin-bottom: 4rem;
+}
+form label {
+  margin: 1rem;
+  color: black;
+}
+form input,
+form textarea {
+  width: 100%;
+  color: #444;
+  border: 2px solid #888;
+  border-radius: 10px;
+  padding: 0.2rem 1rem;
+  font-size: 1.5rem;
+  font-family: "Jost", sans-serif;
+}
+
+form input:active,
+form input:focus {
+  border: 2px solid var(--main_colour) !important;
+}
+
+form button {
+  border-radius: 10px;
+  border: none;
+  border: 0.2rem solid var(--main_colour);
+  padding: 1rem 2rem;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--main_colour);
+  font-weight: 400;
+  transition: transform 0.1s;
+}
+
+form button:hover,
+form button:focus {
+  background: var(--main_colour);
+  color: white;
+}
+
+form button:active {
+  transform: translateY(0.2rem);
+}
+
+#phoneNumber,
+#emailAddress {
+  color: var(--main_colour);
+}
+#phoneNumber:hover {
+  color: #000;
+}
+
+#error {
+  color: var(--main_colour);
+}
